@@ -19,17 +19,17 @@ type LinksNavHeaderProps = {
   },
   {
     href: "#",
-    label: "About",
+    label: "Sobre-nós",
     icon: <BiMessageDetail/>,
   },
   {
     href: "#",
-    label: "Contact",
+    label: "Contato",
     icon: <FiPhoneCall/>,
   },
   {
     href: "#",
-    label: "Cars",
+    label: "Veículos",
     icon: <IoCarSportOutline/>,
   },
 ];

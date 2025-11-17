@@ -18,7 +18,7 @@ export const WhyChoose = () => {
         className="max-w-4/5 mx-auto flex flex-col items-center justify-center gap-6 mb-10"
       >
         <h1 className="text-3xl sm:text-3xl font-bold text-blue-500">
-          Why Choose Auto Shopping
+          Porque escolher <span className="text-amber-400">Auto Shopping?</span>
         </h1>
         <p className="mx-8 text-md text-center text-gray-500 max-w-3/4">
           Aqui, você encontra muito mais do que carros — encontra confiança.
@@ -37,10 +37,11 @@ export const WhyChoose = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              ease: "easeOut",
+              ease: "easeInOut",
             }}
             viewport={{once:true , amount: 0.3}}
             key={reason.id}
+            title={reason.title}
             className="bg-white rounded-md flex flex-col items-center justify-center  gap-4 p-6 mx-2 my-4 shadow-md transition duration-600 hover:-translate-y-2"
           >
             <div className="border border-blue-500 text-3xl text-blue-400 rounded-full p-6 mb-4">

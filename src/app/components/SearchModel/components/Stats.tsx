@@ -6,19 +6,19 @@ export function Stats() {
       <div className="grid grid-cols-2 mt-16 max-w-5xl mx-auto gap-8 md:grid-cols-4">
         <div>
           <h2 className={stylesDefault_H2}>500+</h2>
-          <label>Premium Cars</label>
+          <label>Carros Premios</label>
         </div>
         <div>
           <h2 className={stylesDefault_H2}>50+</h2>
-          <label>Models</label>
+          <label>Modelos</label>
         </div>
         <div>
           <h2 className={stylesDefault_H2}>24/7</h2>
-          <label>Support</label>
+          <label>Suporte</label>
         </div>
         <div>
           <h2 className={stylesDefault_H2}>99%</h2>
-          <label>Satisfaction</label>
+          <label>Satisfação</label>
         </div>
       </div>
     </>

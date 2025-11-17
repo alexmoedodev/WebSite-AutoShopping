@@ -63,22 +63,22 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="flex flex-col gap-6 ">
-          <h4 className="text-lg font-semibold">Quick Links</h4>
+          <h4 className="text-lg font-semibold">Links</h4>
           <ul className="flex flex-col gap-2">
             <li>
               <Link href={"#"} className="hover:underline">Home</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Our Cars</Link>
+              <Link href={"#"}  className="hover:underline">Nossos Carros</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">About us</Link>
+              <Link href={"#"}  className="hover:underline">Sobre-nós</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Contact</Link>
+              <Link href={"#"}  className="hover:underline">Contato</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Terms & Conditions</Link>
+              <Link href={"#"}  className="hover:underline">Termos & Condições</Link>
             </li>
           </ul>
         </div>
@@ -88,26 +88,26 @@ const Footer = () => {
           <h4 className="text-lg font-semibold">Services</h4>
           <ul className="flex flex-col gap-2">
             <li>
-              <Link href={"#"}  className="hover:underline">Economy Cars</Link>
+              <Link href={"#"}  className="hover:underline">Carros economicos</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Luxury Vehicles</Link>
+              <Link href={"#"}  className="hover:underline">Carros de Luxo</Link>
             </li>
             <li>
               <Link href={"#"}  className="hover:underline">SUVs & Trucks</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Electric Cars</Link>
+              <Link href={"#"}  className="hover:underline">Carros Eletricos</Link>
             </li>
             <li>
-              <Link href={"#"}  className="hover:underline">Long-term Rentais</Link>
+              <Link href={"#"}  className="hover:underline">Carros em Destaques</Link>
             </li>
           </ul>
         </div>
 
         {/* Contact */}
         <div className="flex flex-col gap-6">
-          <h4 className="text-lg font-semibold">Contact Us</h4>
+          <h4 className="text-lg font-semibold">Nossos Contatos</h4>
           <div className="flex flex-col gap-2">
             <Link href={"#"} className="flex items-center gap-2 hover:underline">
               <span className="text-blue-500">
@@ -139,7 +139,7 @@ const Footer = () => {
 
       <hr className="my-8 text-gray-800" />
       <div className="flex flex-col gap-2 items-center md:flex-row md:justify-between text-gray-500">
-        <p>
+        <p className="text-center">
           &copy; {new Date().getFullYear()} Auto Shopping. Todos os direitos
           reservados.
         </p>

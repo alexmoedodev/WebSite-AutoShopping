@@ -28,10 +28,7 @@ export const FeatuteCars = () => {
              Auto Shopping
           </h1>
           <p className="my-8 text-gray-500 mx-8 t">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-            minima totam eligendi placeat adipisci enim sit quo itaque
-            reiciendis optio, repellat sequi voluptas accusamus ab quisquam
-            dolore voluptate debitis voluptates.
+            
           </p>
         </motion.div>
         {/* dataCars - Grid*/}

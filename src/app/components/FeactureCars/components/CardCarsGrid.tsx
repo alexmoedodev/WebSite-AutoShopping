@@ -27,7 +27,7 @@ import { cars } from "@/src/data/dataCars";
 
 const CardCarsGrid = () => {
   const stylesSpanLabelIcon = "flex items-center gap-2";
-  const detailsAdditionalLabel =
+  const detailsAdditionalSpan =
     "flex items-center gap-1 text-gray-500 text-sm";
   const detailsAdditionalSpanIcon = "text-blue-500";
 
@@ -52,6 +52,7 @@ const CardCarsGrid = () => {
             <Image
               src={car.imagem}
               alt={car.marca}
+              title={`${car.marca} ${car.modelo}`}
               width={600}
               height={600}
               className="w-full h-62 object-cover rounded-md"
@@ -61,61 +62,61 @@ const CardCarsGrid = () => {
               <div className="flex items-center justify-between border-b-2 border-b-gray-200 gap-2 mt-2">
                 <h2 className="text-gray-600 text-lg mb-2 ">{car.modelo}</h2>
 
-                <label className="flex items-center gap-2" title="Avaliation">
+                <span className="flex items-center gap-2" title="Avaliação">
                   <span className="text-amber-300">
                     <FaStar />
                   </span>
                   {car.avaliacao}
-                </label>
+                </span>
               </div>
 
               {/* Year */}
-              <label className={stylesSpanLabelIcon} title="Year fabrication">
+              <span className={stylesSpanLabelIcon} title="Ano de fabricação">
                 <span>
                   <IoCalendarNumberOutline />
                 </span>
                 {car.ano}
-              </label>
+              </span>
 
               {/* Transmission */}
-              <label className={stylesSpanLabelIcon} title="Transmission">
+              <span className={stylesSpanLabelIcon} title="Tipo de câmbio">
                 <span>
                   <GiGearStickPattern />
                 </span>
                 {car.cambio}
-              </label>
+              </span>
 
               {/* Fuel */}
-              <label className={stylesSpanLabelIcon} title="Type fuel">
+              <span className={stylesSpanLabelIcon} title="Tipo de combustível">
                 <span>
                   <BsFuelPump />
                 </span>
                 {car.combustivel}
-              </label>
+              </span>
 
               {/* Details aditionais */}
               <div className="flex items-center gap-4 my-2">
-                <label
-                  className={detailsAdditionalLabel}
-                  title="Capacity users"
+                <span
+                  className={detailsAdditionalSpan}
+                  title="Capacidade de lugares"
                 >
                   <span className={detailsAdditionalSpanIcon}>
                     <FiUsers />
                   </span>
                   {car.lugares}
-                </label>
-                <label className={detailsAdditionalLabel} title="Km">
+                </span>
+                <span className={detailsAdditionalSpan} title="Kilometragem">
                   <span className={detailsAdditionalSpanIcon}>
                     <SlSpeedometer />
                   </span>
                   {car.km}
-                </label>
-                <label className={detailsAdditionalLabel} title="Color">
+                </span>
+                <span className={detailsAdditionalSpan} title="Cor do carro">
                   <span className={detailsAdditionalSpanIcon}>
                     <IoColorPaletteOutline />
                   </span>
                   {car.cor}
-                </label>
+                </span>
               </div>
             </div>
 
@@ -124,7 +125,7 @@ const CardCarsGrid = () => {
               <div
                 className={`${cardBadgeStyle} bg-green-600 text-white left-5`}
               >
-                <label>Emphasis</label>
+                <span>Destaque</span>
               </div>
             )}
 
@@ -133,7 +134,7 @@ const CardCarsGrid = () => {
               <div
                 className={`${cardBadgeStyle} bg-gray-200 text-gray-700 right-5`}
               >
-                <label>{car.categoria}</label>
+                <span>{car.categoria}</span>
               </div>
             )}
 
@@ -144,8 +145,8 @@ const CardCarsGrid = () => {
 
             {/* Button Details */}
             <div className="w-full flex items-end ">
-              <Button variant="gray" title="Viwer car details ">
-                Viewer Details <IoIosArrowForward />
+              <Button variant="gray" title="Ver detalhes do carro">
+                Ver Detalhes <IoIosArrowForward />
               </Button>
             </div>
           </motion.div>
@@ -154,9 +155,9 @@ const CardCarsGrid = () => {
 
       {/* Button viwer more */}
       <div className="my-8 flex items-center justify-center">
-        <Button variant="blue" className="py-2" title="Viwer more cars">
+        <Button variant="blue" className="py-2" title="Ver mais carros">
           {" "}
-          Viewer More Cars <MdOutlineExpandMore />
+          Ver mais Carros <MdOutlineExpandMore />
         </Button>
       </div>
     </>

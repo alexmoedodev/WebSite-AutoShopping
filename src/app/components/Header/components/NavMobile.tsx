@@ -12,7 +12,6 @@ import { Button } from "@/src/components/ux/Button";
 
 //Import Icons
 import { FiLogIn } from "react-icons/fi";
-import { IoKeyOutline } from "react-icons/io5";
 
 //data navHeader
 import { LinksNavHeader } from "@/src/data/dataNavHeader";
@@ -56,7 +55,7 @@ export function NavMobile() {
                 <ul className="flex flex-col gap-3">
                   {LinksNavHeader.map((link, index) => (
                     <li key={index}>
-                      <LinkNavegation variant="gray" href={link.href} onClick={()=> setIsOpenMenu(!isOpenMenu)}>
+                      <LinkNavegation variant="gray" href={link.href} title={link.label} onClick={()=> setIsOpenMenu(!isOpenMenu)}>
                         <span className="text-blue-500">{link.icon}</span>
                         {link.label}
                       </LinkNavegation>
@@ -71,10 +70,6 @@ export function NavMobile() {
                 <Button variant="blue" className="w-full" title="Fazer login">
                   <FiLogIn />
                   Login
-                </Button>
-                <Button variant="blue" className="w-full" title="Fazer login">
-                  <IoKeyOutline />
-                  Register
                 </Button>
               </div>
             </motion.div>

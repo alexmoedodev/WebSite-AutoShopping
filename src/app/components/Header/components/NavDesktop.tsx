@@ -9,7 +9,7 @@ export function NavDesktop() {
     <>
       {/* Navegation Desktop */}
       <nav>
-        <ul className="hidden md:flex items-center gap-4 text-md text-gray-600">
+        <ul className="hidden md:flex items-center gap-8 text-md text-gray-600">
           {LinksNavHeader.map((link, index) => (
             <li key={index}>
               <LinkNavegation variant="gray" href={link.href}>
