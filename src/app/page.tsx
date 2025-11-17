@@ -7,8 +7,8 @@ import {WhyChoose} from "./components/WhyChoose/WhyChoose";
 import Footer from "./components/Footer/Footer";
 
 export const metadata = {
-  title: "Welcome - Shopping Car",
-  description: "This is the home page of Shopping Car.",
+  title: "Bem vindo ao Auto Shopping",
+  description: "O melhor lugar para encontrar seu próximo carro!",
 };
 
 export default function HomePage() {
