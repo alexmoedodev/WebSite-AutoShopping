@@ -16,14 +16,9 @@ import { MdOutlineExpandMore } from "react-icons/md";
 import { FiUsers } from "react-icons/fi";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 
- //Imports Framer-motion
-import { motion } from "framer-motion"; 
-
-
+ 
 //Imports dataCars
 import { cars } from "@/src/data/dataCars";
-
-
 
 const CardCarsGrid = () => {
   const stylesSpanLabelIcon = "flex items-center gap-2";
@@ -34,20 +29,16 @@ const CardCarsGrid = () => {
   const cardBadgeStyle =
     " w-fit py-1 px-2 text-[12px] rounded-full absolute top-5";
 
-
-
   return (
     <>
       {/* dataCars - Grid*/}
       <div className="grid grid-cols-1 mx-8 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {cars.map((car) => (
-          <motion.div
-          initial={{opacity:0 , y:50}}
-          whileInView={{opacity:1 , y: 0}}
-          transition={{duration:0.6}}
-          viewport={{once:true , amount:0.3}}
+          <div
+          
+    
             key={car.id}
-            className="relative bg-white flex flex-col  gap-2 rounded-md shadow-2xl shadow-gray-100 p-3  transition duration-300 hover:-translate-y-1.5 mb-8 revealCardsCars"
+            className="relative bg-white flex flex-col  gap-2 rounded-md shadow-2xl shadow-gray-100 p-3  transition duration-700 hover:-translate-y-1.5 mb-8"
           >
             <Image
               src={car.imagem}
@@ -149,7 +140,7 @@ const CardCarsGrid = () => {
                 Ver Detalhes <IoIosArrowForward />
               </Button>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

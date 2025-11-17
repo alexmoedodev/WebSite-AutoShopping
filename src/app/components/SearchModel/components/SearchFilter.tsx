@@ -10,6 +10,10 @@ import { IoBookmarksOutline } from "react-icons/io5";
 import { IoLogoModelS } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 
+
+//Imports Framer-motion
+import { motion } from "framer-motion";
+
 //Imports dataCars
 import { cars } from "@/src/data/dataCars";
 
@@ -42,7 +46,14 @@ export function SearchFilter() {
   return (
     <>
       {/* Container Filter */}
-      <div className="bg-white w-5/6 mx-auto max-w-5xl md:w-full grid grid-cols-1 md:grid-cols-4 p-2 rounded-md items-end  gap-5 py-6 px-10">
+      < motion.div 
+      initial={{opacity:0 , y: 50}}
+      whileInView={{opacity:1 , y:0}}
+      transition={{duration: 0.6}}
+      viewport={{once: true , amount: 0.2}}
+      
+      
+      className="bg-white w-5/6 mx-auto max-w-5xl md:w-full grid grid-cols-1 md:grid-cols-4 p-2 rounded-md items-end  gap-5 py-6 px-10">
         {/* pickup Mark */}
         <Select
           icon={<IoBookmarksOutline className="text-blue-500" />}
@@ -94,7 +105,7 @@ export function SearchFilter() {
           <IoSearchSharp />
           Pesquisar
         </Button>
-      </div>
+      </motion.div>
     </>
   );
 }

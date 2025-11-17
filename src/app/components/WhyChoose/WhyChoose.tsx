@@ -8,13 +8,12 @@ import { reasons } from "@/src/data/dataWhyChoose";
 export const WhyChoose = () => {
   return (
     <section className="w-full flex items-center justify-center flex-col my-16 px-4">
-     
       {/* Title Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: true, amount: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="max-w-4/5 mx-auto flex flex-col items-center justify-center gap-6 mb-10"
       >
         <h1 className="text-3xl sm:text-3xl font-bold text-blue-500">
@@ -32,14 +31,7 @@ export const WhyChoose = () => {
       {/* dataWhyChoose */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 max-w-6xl mx-auto">
         {reasons.map((reason) => (
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              ease: "easeInOut",
-            }}
-            viewport={{once:true , amount: 0.3}}
+          <div
             key={reason.id}
             title={reason.title}
             className="bg-white rounded-md flex flex-col items-center justify-center  gap-4 p-6 mx-2 my-4 shadow-md transition duration-600 hover:-translate-y-2"
@@ -53,7 +45,7 @@ export const WhyChoose = () => {
                 {reason.description}
               </span>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
